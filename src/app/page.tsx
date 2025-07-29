@@ -1,12 +1,10 @@
-'use client';
-import React from 'react';
+'use client'; // This directive makes the component a Client Component, allowing for interactivity.
 
 // Main App component
-function App() {
+export default function Home() { // Renamed App to Home and made it a default export
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-gray-100 font-inter antialiased">
-      {/* Tailwind CSS CDN - Ensure this is loaded in your environment if running outside Canvas */}
-      <script src="https://cdn.tailwindcss.com"></script>
+      {/* Tailwind CSS CDN removed - In Next.js, Tailwind is typically installed and configured in your project. */}
 
       {/* Navigation */}
       <nav className="fixed w-full bg-gray-900 bg-opacity-80 backdrop-blur-sm z-50 shadow-lg rounded-b-lg">
@@ -262,5 +260,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
