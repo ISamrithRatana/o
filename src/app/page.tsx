@@ -1,4 +1,5 @@
 'use client'; // This directive makes the component a Client Component, allowing for interactivity.
+import Image from 'next/image'; // Import the Image component from Next.js
 
 // Main App component
 export default function Home() { // Renamed App to Home and made it a default export
@@ -28,7 +29,7 @@ export default function Home() { // Renamed App to Home and made it a default ex
 
         <div className="relative z-10 text-center max-w-4xl mx-auto px-6">
           <h1 className="text-5xl md:text-7xl font-extrabold leading-tight mb-4 text-white drop-shadow-lg">
-            Hi, I'm <span className="text-teal-400">Your Name</span>
+            Hi, I&apos;m <span className="text-teal-400">Your Name</span> {/* Escaped apostrophe */}
           </h1>
           <p className="text-2xl md:text-3xl text-gray-300 mb-8 font-light">
             A passionate <span className="font-semibold text-white">[Your Profession/Role]</span> dedicated to building amazing web experiences.
@@ -47,23 +48,27 @@ export default function Home() { // Renamed App to Home and made it a default ex
         <h2 className="text-4xl font-bold text-center text-teal-400 mb-12">About Me</h2>
         <div className="flex flex-col md:flex-row items-center md:space-x-12">
           <div className="md:w-1/3 mb-8 md:mb-0">
-            {/* Placeholder for your image */}
-            <img
+            {/* Using Next.js Image component for optimization */}
+            <Image
               src="https://placehold.co/300x300/155e75/FFFFFF?text=Your+Photo"
               alt="Your Profile"
+              width={300} // Specify width
+              height={300} // Specify height
+              priority // Prioritize loading for LCP
               className="rounded-full w-64 h-64 mx-auto object-cover border-4 border-teal-500 shadow-lg"
-              onError={(e) => { e.target.onerror = null; e.target.src="https://placehold.co/300x300/155e75/FFFFFF?text=Image+Missing"; }}
+              // onError is not typically used with Next.js Image component, as it handles errors internally.
+              // For a placeholder, you might control it outside with state if needed.
             />
           </div>
           <div className="md:w-2/3 text-lg text-gray-300 leading-relaxed">
             <p className="mb-4">
-              Hello! I'm <span className="font-semibold text-white">Your Name</span>, a [Your Profession/Role] with X years of experience in [Your Field]. My journey in technology began with a fascination for [mention something specific that sparked your interest, e.g., how websites work, solving complex problems with code].
+              Hello! I&apos;m <span className="font-semibold text-white">Your Name</span>, a [Your Profession/Role] with X years of experience in [Your Field]. My journey in technology began with a fascination for [mention something specific that sparked your interest, e.g., how websites work, solving complex problems with code].
             </p>
             <p className="mb-4">
               I specialize in [mention your main expertise, e.g., front-end development, full-stack solutions, data analysis] and am passionate about creating intuitive, efficient, and visually appealing applications. I thrive in environments where I can continuously learn and apply new technologies to solve real-world problems.
             </p>
             <p>
-              Outside of coding, I enjoy [mention a hobby or two, e.g., hiking, reading sci-fi novels, playing guitar], which helps me stay refreshed and brings new perspectives to my work. I'm always eager to connect with like-minded individuals and collaborate on exciting projects!
+              Outside of coding, I enjoy [mention a hobby or two, e.g., hiking, reading sci-fi novels, playing guitar], which helps me stay refreshed and brings new perspectives to my work. I&apos;m always eager to connect with like-minded individuals and collaborate on exciting projects! {/* Escaped apostrophe */}
             </p>
           </div>
         </div>
@@ -79,7 +84,7 @@ export default function Home() { // Renamed App to Home and made it a default ex
             <ul className="list-disc list-inside text-gray-300 text-left pl-4">
               <li>React.js</li>
               <li>Next.js</li>
-              <li>HTML5 & CSS3</li>
+              <li>HTML5 &amp; CSS3</li> {/* Escaped ampersand */}
               <li>Tailwind CSS</li>
             </ul>
           </div>
@@ -102,9 +107,9 @@ export default function Home() { // Renamed App to Home and made it a default ex
             </ul>
           </div>
           <div className="bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-xl transform hover:scale-105 transition-all duration-300 text-center">
-            <h3 className="text-2xl font-semibold mb-2 text-white">Tools & Others</h3>
+            <h3 className="text-2xl font-semibold mb-2 text-white">Tools &amp; Others</h3> {/* Escaped ampersand */}
             <ul className="list-disc list-inside text-gray-300 text-left pl-4">
-              <li>Git & GitHub</li>
+              <li>Git &amp; GitHub</li> {/* Escaped ampersand */}
               <li>Docker</li>
               <li>AWS Basics</li>
               <li>Jira</li>
@@ -119,16 +124,17 @@ export default function Home() { // Renamed App to Home and made it a default ex
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Example Project Card 1 */}
           <div className="bg-gray-700 rounded-lg shadow-md overflow-hidden hover:shadow-xl transform hover:scale-105 transition-all duration-300">
-            <img
+            <Image
               src="https://placehold.co/600x400/374151/FFFFFF?text=Project+1+Image"
               alt="Project 1"
+              width={600} // Specify width
+              height={400} // Specify height
               className="w-full h-48 object-cover"
-              onError={(e) => { e.target.onerror = null; e.target.src="https://placehold.co/600x400/374151/FFFFFF?text=Image+Missing"; }}
             />
             <div className="p-6">
               <h3 className="text-2xl font-semibold text-white mb-2">Project Title One</h3>
               <p className="text-gray-300 mb-4">
-                A brief description of this project, highlighting its purpose and the technologies used. For example, "A full-stack e-commerce platform built with React, Node.js, and MongoDB."
+                A brief description of this project, highlighting its purpose and the technologies used. For example, &quot;A full-stack e-commerce platform built with React, Node.js, and MongoDB.&quot; {/* Escaped double quotes */}
               </p>
               <div className="flex flex-wrap gap-2 mb-4">
                 <span className="bg-teal-600 text-white text-xs font-semibold px-2 py-1 rounded-full">React</span>
@@ -152,16 +158,17 @@ export default function Home() { // Renamed App to Home and made it a default ex
 
           {/* Example Project Card 2 */}
           <div className="bg-gray-700 rounded-lg shadow-md overflow-hidden hover:shadow-xl transform hover:scale-105 transition-all duration-300">
-            <img
+            <Image
               src="https://placehold.co/600x400/374151/FFFFFF?text=Project+2+Image"
               alt="Project 2"
+              width={600} // Specify width
+              height={400} // Specify height
               className="w-full h-48 object-cover"
-              onError={(e) => { e.target.onerror = null; e.target.src="https://placehold.co/600x400/374151/FFFFFF?text=Image+Missing"; }}
             />
             <div className="p-6">
               <h3 className="text-2xl font-semibold text-white mb-2">Project Title Two</h3>
               <p className="text-gray-300 mb-4">
-                Description of your second project. Focus on the problem it solves and your contribution. "A mobile-first responsive landing page for a tech startup, designed with Figma and implemented with Tailwind CSS."
+                Description of your second project. Focus on the problem it solves and your contribution. &quot;A mobile-first responsive landing page for a tech startup, designed with Figma and implemented with Tailwind CSS.&quot; {/* Escaped double quotes */}
               </p>
               <div className="flex flex-wrap gap-2 mb-4">
                 <span className="bg-teal-600 text-white text-xs font-semibold px-2 py-1 rounded-full">HTML</span>
@@ -185,16 +192,17 @@ export default function Home() { // Renamed App to Home and made it a default ex
 
           {/* Example Project Card 3 */}
           <div className="bg-gray-700 rounded-lg shadow-md overflow-hidden hover:shadow-xl transform hover:scale-105 transition-all duration-300">
-            <img
+            <Image
               src="https://placehold.co/600x400/374151/FFFFFF?text=Project+3+Image"
               alt="Project 3"
+              width={600} // Specify width
+              height={400} // Specify height
               className="w-full h-48 object-cover"
-              onError={(e) => { e.target.onerror = null; e.target.src="https://placehold.co/600x400/374151/FFFFFF?text=Image+Missing"; }}
             />
             <div className="p-6">
               <h3 className="text-2xl font-semibold text-white mb-2">Project Title Three</h3>
               <p className="text-gray-300 mb-4">
-                Details about your third project, focusing on its impact and your learning. "A data visualization dashboard using D3.js to display complex financial data in an interactive way."
+                Details about your third project, focusing on its impact and your learning. &quot;A data visualization dashboard using D3.js to display complex financial data in an interactive way.&quot; {/* Escaped double quotes */}
               </p>
               <div className="flex flex-wrap gap-2 mb-4">
                 <span className="bg-teal-600 text-white text-xs font-semibold px-2 py-1 rounded-full">JavaScript</span>
@@ -223,7 +231,7 @@ export default function Home() { // Renamed App to Home and made it a default ex
         <h2 className="text-4xl font-bold text-center text-teal-400 mb-12">Get in Touch</h2>
         <div className="max-w-xl mx-auto text-center text-lg text-gray-300">
           <p className="mb-8">
-            I'm currently open to new opportunities and collaborations. Whether you have a question, a project idea, or just want to say hi, feel free to reach out!
+            I&apos;m currently open to new opportunities and collaborations. Whether you have a question, a project idea, or just want to say hi, feel free to reach out! {/* Escaped apostrophe */}
           </p>
           <div className="space-y-4">
             <a
