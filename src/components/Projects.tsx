@@ -2,6 +2,15 @@
 import React from 'react';
 import { ExternalLink, Github } from 'lucide-react';
 
+type Project = {
+  title: string;
+  description: string;
+  imageUrl: string;
+  tags: string[];
+  liveUrl: string;
+  githubUrl: string;
+};
+
 const projectData = [
   {
     title: 'Project One: E-commerce Platform',
@@ -29,7 +38,7 @@ const projectData = [
   },
 ];
 
-const ProjectCard = ({ project }) => (
+const ProjectCard = ({ project }: { project: Project }) => (
   <div className="bg-gray-900 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 group">
     <div className="relative">
       <img
