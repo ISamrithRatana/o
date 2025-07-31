@@ -9,7 +9,7 @@ const Hero = () => {
     >
       <div className="container mx-auto px-6 text-center animate-fade-in-up">
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight tracking-tight">
-          Hello, I'm <span className="text-accent">Samrith Ratana</span>
+          Hello, Im <span className="text-accent">Samrith Ratana</span>
         </h1>
         <p className="mt-6 text-lg sm:text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto">
           A passionate Full-Stack Developer building clean, scalable, and modern web applications.

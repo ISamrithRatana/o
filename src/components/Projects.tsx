@@ -82,7 +82,7 @@ const Projects = () => {
       <div className="container mx-auto px-6">
         <h2 className="text-4xl font-extrabold text-center text-white mb-6">🚀 My Projects</h2>
         <p className="text-center text-gray-400 max-w-2xl mx-auto mb-14">
-          Here are some recent projects I've worked on — full-stack applications, real-time tools, and static sites.
+          Here are some recent projects Ive worked on — full-stack applications, real-time tools, and static sites.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {projectData.map((project, index) => (
