@@ -8,7 +8,7 @@ const Contact = () => {
       <div className="container mx-auto px-6">
         <h2 className="text-4xl font-extrabold text-center text-white mb-6 tracking-tight">📬 Get In Touch</h2>
         <p className="text-center text-gray-400 max-w-2xl mx-auto mb-12">
-          I'm open to freelance projects, collaborations, or full-time roles. Drop me a message — I'll respond within 24 hours.
+          Im open to freelance projects collaborations or full-time roles. Drop me a message — Ill respond within 24 hours.
         </p>
 
         <div className="max-w-5xl mx-auto bg-gray-800/60 backdrop-blur-md border border-gray-700 rounded-2xl shadow-xl p-8 md:p-12 grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -16,7 +16,7 @@ const Contact = () => {
           <div className="space-y-6">
             <h3 className="text-2xl font-bold text-white">📞 Contact Information</h3>
             <p className="text-gray-400">
-              You can reach me anytime via email or phone. I'm based in Phnom Penh and available for remote work globally.
+              You can reach me anytime via email or phone. Im based in Phnom Penh and available for remote work globally.
             </p>
             <div className="space-y-4 text-gray-300">
               <div className="flex items-center gap-3">
@@ -29,7 +29,7 @@ const Contact = () => {
               </div>
               <div className="flex items-center gap-3">
                 <MapPin className="text-accent" size={20} />
-                Phnom Penh, Cambodia
+                Phnom Penh Cambodia
               </div>
             </div>
           </div>
