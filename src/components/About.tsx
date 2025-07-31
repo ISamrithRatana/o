@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
 import { Code, Database, Server, PenTool } from 'lucide-react';
+import Image from 'next/image';
 
 const skills = [
   { name: 'Frontend', description: 'React, Next.js, Tailwind CSS, TypeScript', icon: <Code className="text-accent" /> },
@@ -20,18 +21,19 @@ const About = () => {
 
         <div className="flex flex-col md:flex-row items-center gap-14">
           <div className="md:w-1/3">
-            <img
+
+            <Image
               src="https://placehold.co/400x400/1c1c22/f0f2f5?text=Your+Photo"
               alt="Your Name"
-              className="rounded-full shadow-xl mx-auto hover:scale-105 transition-transform duration-300"
-              onError={(e) => {
-                e.currentTarget.src = 'https://placehold.co/400x400/1c1c22/f0f2f5?text=Profile';
-              }}
+              width={400}
+              height={400}
+              className="rounded-full shadow-2xl mx-auto"
             />
+
           </div>
           <div className="md:w-2/3 text-lg text-secondary leading-relaxed space-y-5">
             <p>
-              Hello! I'm a software developer based in <span className="text-white font-semibold">[Your City]</span>, crafting full-stack web applications with thoughtful user experiences and solid backend logic.
+              Hello! Im a software developer based in <span className="text-white font-semibold">[Your City]</span>, crafting full-stack web applications with thoughtful user experiences and solid backend logic.
             </p>
             <p>
               I enjoy working across the stack and love building tools that solve real problems. Outside of tech, I enjoy <span className="text-white font-medium">[Hobby 1]</span>, <span className="text-white font-medium">[Hobby 2]</span>, and exploring new ideas in design and AI.
